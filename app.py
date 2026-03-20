@@ -9,10 +9,10 @@ st.title("📊 NordTech Datu Analīzes Panelis")
 # 2. Funkcija datu ielādei
 @st.cache_data
 def load_data():
-# Svarīgi: failam jābūt tajā pašā mapē, kur šim app.py failam!
-df = pd.read_csv('enriched_data.csv')
-df['Date'] = pd.to_datetime(df['Date'])
-return df
+    # Svarīgi: failam jābūt tajā pašā mapē, kur šim app.py failam!
+    df = pd.read_csv('enriched_data.csv')
+    df['Date'] = pd.to_datetime(df['Date'])
+    return df
 
 try:
 df = load_data()
